@@ -10,15 +10,12 @@ public class PermCheck {
             Task score: 100%
         */
         //this solution offers a O(1) worst-case space complexity
-        int res = 1;
         int N = A.length;
         Arrays.sort(A);
         for (int i = 0; i < N; i++)
             if (A[i] != i + 1) {
-                res = i;
-                break;
+                return 0;
             }
-        
-        return res;
+        return 1;
     }
 }
